@@ -1,0 +1,6 @@
+{
+    "stock": 1500,
+    "bookings": 300,
+    "pendingDeliveries": 45,
+    "earnings": 12000
+}
