@@ -1,153 +1,148 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* admin.css */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
+/* Navbar Styles */
 .navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #343a40;
+    color: #fff;
+    padding: 0 20px;
+    height: 60px;
 }
 
-.navbar-left h1 {
+.navbar h1 {
     margin: 0;
+    font-size: 24px;
 }
 
-.navbar-right ul {
+.navbar ul {
     list-style: none;
     display: flex;
     margin: 0;
+    padding: 0;
 }
 
-.navbar-right li a {
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    font-weight: bold;
 }
 
+/* Main Layout Styles */
 .main {
     display: flex;
+    height: calc(100vh - 60px);
 }
 
+/* Sidebar Styles */
 .sidebar {
     width: 200px;
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    height: calc(100vh - 64px);
-    position: sticky;
-    top: 64px;
+    background-color: #f8f9fa;
+    padding-top: 20px;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
     overflow-y: auto;
-    border-right: 2px solid #4CAF50; /* Separator line */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar ul {
     list-style: none;
+    padding: 0;
 }
 
-.sidebar li {
-    margin-bottom: 1rem;
+.sidebar ul li {
+    margin-bottom: 10px;
 }
 
-.sidebar a {
-    color: #fff;
+.sidebar ul li a {
+    color: #343a40;
     text-decoration: none;
+    padding: 10px;
     display: block;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color 0.2s;
 }
 
-.sidebar a:hover {
-    background-color: #4CAF50;
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    background-color: #343a40;
+    color: #fff;
 }
 
 .sub-menu {
     list-style: none;
-    margin-left: 1rem;
-    padding-left: 1rem;
-    border-left: 2px solid #4CAF50;
+    padding-left: 20px;
 }
 
+.sub-menu li a {
+    color: #495057;
+}
+
+/* Container and Card Styles */
 .container {
+    margin-left: 200px;
+    padding: 20px;
     flex-grow: 1;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 2rem auto;
+    overflow-y: auto;
 }
 
 .card {
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 1rem 0;
-    padding: 2rem;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
     display: none;
-    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card.active {
     display: block;
 }
 
-.card h2 {
-    margin-bottom: 1rem;
-    color: #333;
-    font-size: 1.5rem;
+.card img {
+    max-width: 100px;
+    margin: 5px;
 }
 
-.card p {
-    color: #666;
-    font-size: 1rem;
-    line-height: 1.5;
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-.card label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #333;
-    font-weight: bold;
+form label {
+    margin-bottom: 10px;
 }
 
-.card input[type="number"] {
-    width: calc(100% - 22px);
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
     border-radius: 5px;
 }
 
-.card button {
-    padding: 0.5rem 1.5rem;
-    background-color: #4CAF50;
+form button {
+    padding: 10px 20px;
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.2s, transform 0.2s;
-    margin: 0.5rem 0;
-    margin-top: 1rem; /* Added margin */
 }
 
-.card button:hover {
-    background-color: #45a049;
-    transform: translateY(-2px);
+form button:hover {
+    background-color: #0056b3;
 }
 
+/* Footer Styles */
 .footer {
-    background-color: #333;
+    background-color: #343a40;
     color: #fff;
     text-align: center;
-    padding: 1rem;
-    border-top: 4px solid #4CAF50;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
